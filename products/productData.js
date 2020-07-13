@@ -50,7 +50,17 @@ const poster5 = {
     
 };
 
-export default productData;
+const posters = [
+    poster1,
+    poster2,
+    poster3,
+    poster4,
+    poster5
+];
+
+export default posters;
+
+//think about adding one more poster that has the same "category" / year as another
 
 
 // product 1 name
