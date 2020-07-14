@@ -8,6 +8,7 @@ const poster1 = {
     description: 'Burning Man Multiverse 2020',
     category: 2020,
     price: 12.00,
+
 };
 
 const poster2 = {
@@ -17,7 +18,7 @@ const poster2 = {
     description: 'Burning Man: Metamorphesis 2019',
     category: 2019,
     price: 12.00,
-    
+
 };
 
 const poster3 = {
@@ -56,9 +57,11 @@ const posters = [
     poster3,
     poster4,
     poster5
+
 ];
 
 export default posters;
+
 
 //think about adding one more poster that has the same "category" / year as another
 
