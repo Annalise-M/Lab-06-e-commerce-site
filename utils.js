@@ -11,17 +11,17 @@ for (let i = 0; i < posters.length; i++) {
 }
 
 
+// findbyId function
+export function findById(array, id) {
+    let chosenItem;
 
-// export function findById(array, id) {
-//     let chosenItem;
+    for (let i = 0; i < array.length; i++) {
+        const item = array[i];
+        if (item.id === id) {
+            chosenItem = item;
+        }
+    }
 
-//     for (let i = 0; i < array.length; i++) {
-//         const item = array[i];
-//         if (item.id === id) {
-//             chosenItem = item;
-//         }
-//     }
-
-//     return chosenItem;
-// }
+    return chosenItem;
+}
 
