@@ -47,7 +47,7 @@ const poster5 = {
     image: 'BM_2016_poster.jpg',
     description: 'Burning Man: Davincis Workshop 2016',
     category: 2016,
-    price: 12.00,
+    price: 12.00
     
 };
 
