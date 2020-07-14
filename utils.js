@@ -6,11 +6,9 @@ const list = document.getElementById('posters');
 for (let i = 0; i < posters.length; i++) {
     const poster = posters[i];
     const dom = renderPosters(poster);
+    
     list.appendChild(dom);
 }
-
-
-
 
 
 

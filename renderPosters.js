@@ -37,6 +37,3 @@ function renderPosters(posters) {
 
 export default renderPosters;
 
-
-
-

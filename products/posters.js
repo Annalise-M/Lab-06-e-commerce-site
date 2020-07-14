@@ -7,9 +7,10 @@ const poster1 = {
     image: 'BM_2020_poster.jpg',
     description: 'Burning Man Multiverse 2020',
     category: 2020,
-    price: 12.00,
+    price: 12.00
 
 };
+
 
 const poster2 = {
     id: 'poster-2',
@@ -17,9 +18,10 @@ const poster2 = {
     image: 'BM_2019_poster.jpg',
     description: 'Burning Man: Metamorphesis 2019',
     category: 2019,
-    price: 12.00,
+    price: 12.00
 
 };
+
 
 const poster3 = {
     id: 'poster-3',
@@ -27,9 +29,10 @@ const poster3 = {
     image: 'BM_2018_poster.jpg',
     description: 'Burning Man: I, Robot 2018',
     category: 2018,
-    price: 12.00,
+    price: 12.00
     
 };
+
 
 const poster4 = {
     id: 'poster-4',
@@ -37,9 +40,10 @@ const poster4 = {
     image: 'BM_2017_poster.jpg',
     description: 'Burning Man: Radical Ritual 2017',
     category: 2017,
-    price: 12.00,
+    price: 12.00
     
 };
+
 
 const poster5 = {
     id: 'poster-5',
@@ -50,6 +54,7 @@ const poster5 = {
     price: 12.00
     
 };
+
 
 const posters = [
     poster1,
