@@ -1,14 +1,3 @@
-import posters from './posters.js';
-
-const list = document.getElementById('posters');
-
-for (let i = 0; i < posters.length; i++) {
-    const posterItem = posters[i];
-    const postersLi = renderPosters(posterItem);
-
-    list.appendChild(postersLi);
-}
-
 function renderPosters(posters) {
 
     const li = document.createElement('li');
@@ -29,10 +18,6 @@ function renderPosters(posters) {
     p.className = 'price';
 
     const usd = '$' + posters.price.toFixed(2);
-    // const usd = fruit.price.toLocaleString('en-US', { 
-    //     style: 'currency', 
-    //     currency: 'USD' 
-    // });
     p.textContent = usd;
 
     const button = document.createElement('button');
@@ -45,6 +30,6 @@ function renderPosters(posters) {
     return li;
 
 }
-
 export default renderPosters;
+
 
