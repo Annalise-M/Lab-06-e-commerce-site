@@ -1,7 +1,13 @@
-import cart from './cart.js';
 import posters from '../products/posters.js';
-import { findById, calcOrderTotal, toUSD } from '../utils.js';
+import { 
+    findById, 
+    calcOrderTotal, 
+    toUSD,
+    getCart, 
+} from '../utils.js';
 import renderLineItem from './renderLineItem.js';
+
+const cart = getCart();
 
 const tbody = document.querySelector('tbody');
 const orderTotalCell = document.getElementById('order-total-cell');
