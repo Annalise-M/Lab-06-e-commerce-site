@@ -5,48 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/">
-    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/home.css">
     
     <title>Burner Den Posters!</title>
     <nav>
         <a href="../">Home</a>
         <a href="../shoppingCart/cartPage.html">Cart</a>
-        <!-- link to cart page here -->
-        <!-- <a href="../my-cart" -->
     </nav>
 </head>
-
-<body>
-    <header>
-        Welcome to the Burner Den! Get your schwag below!
-    </header>
-    <main>
-        <!-- place products in a box / container? -->
-        <section id="main-section">
-            <!-- place product 1 -->    
-                <!-- img here-->
-                <!-- name -->
-                <!-- description? -->
-                <!-- price -->
-                <!-- input for quantity - set to a number -->
-                <!-- Add Button (product whose value is the product id) -->
-
-            <div id="products-container">
-                <ul id="posters">
-                    <!-- <img src="../assets/BM_2020_poster.jpg" height="450" width="" />
-                        <li>Mulitverse</li>
-                        <li>Burning Man: Mulitverse 2020</li>
-                        <li>2020</li>
-                        <li>12.00</li>
-                    <input type="number" name="quantity" value="num1"/>
-                    <button id="add-button">Add to Cart</button> -->
-                </ul>
-                    <break />
-            </div>
-
-        </section>
-    </main>
-    <script type="module" src="../utils.js"></script>
-</body>
+    <body>
+        <header>
+            Welcome to the Burner Den! Get your schwag below!
+        </header>
+        <main>
+            <section id="main-section">
+                <div id="products-container">
+                    <ul id="posters"></ul>
+                        <break />
+                </div>
+            </section>
+        </main>
+        <script type="module" src="./renderPosters.js"></script>
+    </body>
 </html>
+

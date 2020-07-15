@@ -1,6 +1,3 @@
-// export default
-//(Remember: the Add button is = product id!) 
-
 const poster1 = {
     id: 'poster-1',
     name: 'Mulitverse',

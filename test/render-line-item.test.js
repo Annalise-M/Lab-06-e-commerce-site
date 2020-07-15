@@ -12,7 +12,7 @@ test('renders a line item', assert => {
     };
 
     const poster = findById(posters, lineItem.id);
-    const expected = '<tr><td class="chosen-item">Metamorphesis</td><td></td><td>$12.00</td><td class="line-item-total">$12.00</td></tr>';
+    const expected = '<tr><td class="chosen-item">Metamorphesis</td><td>1</td><td>$12.00</td><td class="line-item-total">$12.00</td></tr>';
 
     //Act
     const dom = renderLineItem(lineItem, poster);
