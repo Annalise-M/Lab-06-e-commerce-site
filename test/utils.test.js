@@ -6,6 +6,7 @@ import { findById, calcLineItem } from '../utils.js';
 
 const test = QUnit.test;
 
+
 test('find item by id', assert => {
     //Arrange
     // Set up your parameters and expectations
@@ -23,19 +24,29 @@ test('find item by id', assert => {
 });
 
 
+test('to return null if id not found', assert => {
+    //Arrange
+    const id = 'not found';
+    const expected = null;
+
+    //Act 
+    const foundPoster = findById(posters, id);
+
+    //Assert
+    assert.equal(foundPoster, expected);
+});
+
+
 test('calculating line item', (assert) => {
     //Arrange
-    // Set up your parameters and expectations
+    
     const quantity = 2;
     const cost = 12.00;
     const expected = 24.00;
 
     //Act 
-    // Call the function you're testing and set the result to a const
     const total = calcLineItem(quantity, cost);
 
     //Assert
-    // Make assertions about what is expected valid result
-
     assert.equal(total, expected);
 });
