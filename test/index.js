@@ -16,3 +16,4 @@ global.URL = window.URL;
 
 require = require('esm')(module);
 module.exports = require('./tests.js');
+

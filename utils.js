@@ -1,27 +1,46 @@
-import renderPosters from './renderPosters.js';
-import posters from './products/posters.js';
+export function findById(array, id) {
+    let chosenItem;
 
-const list = document.getElementById('posters');
-
-for (let i = 0; i < posters.length; i++) {
-    const poster = posters[i];
-    const dom = renderPosters(poster);
-    
-    list.appendChild(dom);
+    for (let i = 0; i < array.length; i++) {
+        const item = array[i];
+        if (item.id === id) {
+            chosenItem = item;
+        }
+    }
+    return chosenItem;
 }
 
 
+function roundCurrency(amount) {
+    return Math.round(amount * 100) / 100;
+}
 
-// export function findById(array, id) {
-//     let chosenItem;
 
-//     for (let i = 0; i < array.length; i++) {
-//         const item = array[i];
-//         if (item.id === id) {
-//             chosenItem = item;
-//         }
-//     }
+export function toUSD(number) {
+    return number.toLocaleString('en-US', {
+        style: 'currency',
+        currency: 'USD'
+    });
+}
 
-//     return chosenItem;
-// }
+
+export function calcLineItem(quantity, price) {
+    const orderTotal = quantity * price;
+
+    return roundCurrency(orderTotal);
+}
+
+
+export function calcOrderTotal(cart, posters) {
+    let orderTotal = 0;
+
+    for (let i = 0; i < cart.length; i++) {
+        const lineItem = cart[i];
+        const poster = findById(posters, lineItem.id);
+        const lineTotal = calcLineItem(lineItem.quantity, poster.price);
+
+        orderTotal += lineTotal;
+    }
+    return orderTotal;
+}
 

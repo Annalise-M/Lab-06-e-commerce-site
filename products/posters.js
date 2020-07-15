@@ -1,6 +1,3 @@
-// export default
-//(Remember: the Add button is = product id!) 
-
 const poster1 = {
     id: 'poster-1',
     name: 'Mulitverse',
@@ -67,43 +64,3 @@ const posters = [
 
 export default posters;
 
-
-//think about adding one more poster that has the same "category" / year as another
-
-
-// product 1 name
-
-// product 2 name
-    // id
-    // name
-    // image
-    // description
-    // category
-    // price
-
-
-// product 3 name
-    // id
-    // name
-    // image
-    // description
-    // category
-    // price
-
-
-// product 4 name
-    // id
-    // name
-    // image
-    // description
-    // category
-    // price
-    
-    
-// product 5 name
-    // id
-    // name
-    // image
-    // description
-    // category
-    // price
