@@ -1,6 +1,6 @@
 import { toUSD } from '../utils.js';
 
-export function renderLineItem(cartItem, posters) {
+export default function renderLineItem(cartItem, posters) {
     const tr = document.createElement('tr');
 
     const nameTd = document.createElement('td');

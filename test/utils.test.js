@@ -50,3 +50,4 @@ test('calculating line item', (assert) => {
     //Assert
     assert.equal(total, expected);
 });
+

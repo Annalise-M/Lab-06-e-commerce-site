@@ -1,4 +1,4 @@
-import renderPosters from '../renderPosters.js';
+import renderPosters from '../products/renderPosters.js';
 
 const test = QUnit.test;
 
