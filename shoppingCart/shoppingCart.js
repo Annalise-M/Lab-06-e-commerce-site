@@ -1,5 +1,5 @@
 import cart from './cart.js';
-import posters from './products/posters.js';
+import posters from '../products/posters.js';
 import { findById, calcOrderTotal, toUSD } from '../utils.js';
 import renderLineItem from './renderLineItem.js';
 

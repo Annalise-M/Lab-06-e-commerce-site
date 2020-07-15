@@ -9,7 +9,7 @@ export default function renderLineItem(cartItem, posters) {
     tr.appendChild(nameTd);
 
     const quantityTd = document.createElement('td');
-    quantityTd.textContent = cartItem.quatity;
+    quantityTd.textContent = cartItem.quantity;
     tr.appendChild(quantityTd);
 
     const priceTd = document.createElement('td');
@@ -24,5 +24,4 @@ export default function renderLineItem(cartItem, posters) {
 
     return tr;
 }
-
 

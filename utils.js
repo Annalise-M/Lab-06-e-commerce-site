@@ -37,7 +37,7 @@ export function calcOrderTotal(cart, posters) {
     for (let i = 0; i < cart.length; i++) {
         const lineItem = cart[i];
         const poster = findById(posters, lineItem.id);
-        const lineTotal = calcLineItem(lineItem.quanity, poster.price);
+        const lineTotal = calcLineItem(lineItem.quantity, poster.price);
 
         orderTotal += lineTotal;
     }

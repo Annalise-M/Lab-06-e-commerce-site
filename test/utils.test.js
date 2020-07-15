@@ -1,8 +1,6 @@
 import posters from '../products/posters.js';
-import { findById, calcLineItem } from '../utils.js';
-
-// import cart from '../shoppingCart/cart.js';
-
+import { findById, calcLineItem, calcOrderTotal } from '../utils.js';
+import cart from '../shoppingCart/cart.js';
 
 const test = QUnit.test;
 
@@ -49,5 +47,16 @@ test('calculating line item', (assert) => {
 
     //Assert
     assert.equal(total, expected);
+});
+
+test('calculate the total order', (assert) => {
+    //Arrange
+    const expected = 72;
+
+    //Act
+    const orderTotal = calcOrderTotal(cart, posters);
+
+    //Assert
+    assert.equal(orderTotal, expected);
 });
 
