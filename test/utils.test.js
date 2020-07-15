@@ -1,5 +1,5 @@
 import posters from '../products/posters.js';
-import { findById } from '../utils.js';
+import { findById, calcLineItem } from '../utils.js';
 
 // import cart from '../shoppingCart/cart.js';
 
@@ -22,3 +22,20 @@ test('find item by id', assert => {
     assert.equal(chosenPoster.name, expected);
 });
 
+
+test('calculating line item', (assert) => {
+    //Arrange
+    // Set up your parameters and expectations
+    const quantity = 2;
+    const cost = 12.00;
+    const expected = 24.00;
+
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const total = calcLineItem(quantity, cost);
+
+    //Assert
+    // Make assertions about what is expected valid result
+
+    assert.equal(total, expected);
+});
