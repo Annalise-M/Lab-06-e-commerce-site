@@ -1,17 +1,3 @@
-import renderPosters from './renderPosters.js';
-import posters from './products/posters.js';
-
-
-const list = document.getElementById('posters');
-
-for (let i = 0; i < posters.length; i++) {
-    const poster = posters[i];
-    const dom = renderPosters(poster);
-    
-    list.appendChild(dom);
-}
-
-
 export function findById(array, id) {
     let chosenItem;
 
@@ -21,7 +7,6 @@ export function findById(array, id) {
             chosenItem = item;
         }
     }
-
     return chosenItem;
 }
 
@@ -45,7 +30,8 @@ export function calcLineItem(quantity, price) {
     return roundCurrency(orderTotal);
 }
 
-export function calcOrdeTotal(cart, posters) {
+
+export function calcOrderTotal(cart, posters) {
     let orderTotal = 0;
 
     for (let i = 0; i < cart.length; i++) {
