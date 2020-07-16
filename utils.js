@@ -44,3 +44,9 @@ export function calcOrderTotal(cart, posters) {
     return orderTotal;
 }
 
+export function getCart(){
+    const dynamicCart = localStorage.getItem('CART');
+    const cart = JSON.parse(dynamicCart) || [];
+    
+    return cart;
+}

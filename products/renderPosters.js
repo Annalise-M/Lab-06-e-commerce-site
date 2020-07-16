@@ -1,3 +1,5 @@
+import { findById } from '../utils.js';
+
 function renderPosters(posters) {
 
     const li = document.createElement('li');
@@ -22,7 +24,32 @@ function renderPosters(posters) {
 
     const button = document.createElement('button');
     button.textContent = 'Add to Cart';
-    button.value = posters.code;
+    button.value = posters.id;
+    button.addEventListener('click', () => {
+        const initializedEmptyCart = '[]';
+        const cartInLocalStorage = localStorage.getItem('CART') || initializedEmptyCart;
+        const cart = JSON.parse(cartInLocalStorage);
+
+        let itemInCart = findById(cart, posters.id);
+
+        if (!itemInCart) {
+            const initializedEmptyCart = {
+                id: posters.id,
+                quantity: 1
+            };
+
+            cart.push(initializedEmptyCart);
+        }
+        else {
+            itemInCart.quantity++;
+        }
+
+        const stringyCart = JSON.stringify(cart);
+
+        localStorage.setItem('CART', stringyCart);
+        alert('1 ' + posters.name + ' added to cart');
+
+    });
     p.appendChild(button);
 
     li.appendChild(p);
@@ -30,6 +57,6 @@ function renderPosters(posters) {
     return li;
 
 }
-export default renderPosters;
 
+export default renderPosters;
 
