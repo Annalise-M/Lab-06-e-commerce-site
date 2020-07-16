@@ -30,10 +30,10 @@ if (cart.length === 0) {
 } 
 else {
     placeOrderButton.addEventListener('click', () => {
+        //work on prettier string info when prompt comees up
+        alert('Order placed! ' + JSON.stringify(getCart(), true, 2));
         
         localStorage.removeItem('CART');
-
-        alert('Order placed! ' + JSON.stringify(getCart, true));
 
         window.location = '../index.html';
     });
