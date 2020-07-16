@@ -7,6 +7,8 @@ import {
 } from '../utils.js';
 import renderLineItem from './renderLineItem.js';
 
+const placeOrderButton = document.getElementById('place-order-button');
+
 const cart = getCart();
 
 const tbody = document.querySelector('tbody');
@@ -18,6 +20,9 @@ for (let i = 0; i < cart.length; i++) {
     const dom = renderLineItem(lineItem, poster);
     
     tbody.appendChild(dom);
+}
+if (cart.length === 0) {
+    placeOrderButton.disabled = true;
 }
 
 const orderTotal = calcOrderTotal(cart, posters);
