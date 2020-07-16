@@ -30,8 +30,18 @@ if (cart.length === 0) {
 } 
 else {
     placeOrderButton.addEventListener('click', () => {
+        let arrayMessage = [];
+
+        for (let i = 0; i < cart.length; i++) {
+            const item = cart[i];
+            const poster = findById(posters, item.id);
+            const name = poster.name;
+
+            arrayMessage.push(`You're order for ${name} ${item.quantity} has been placed! Thank you!`);
+
+        }
         //work on prettier string info when prompt comees up
-        alert('Order placed! ' + JSON.stringify(getCart(), true, 2));
+        alert(`${arrayMessage.join(', ')}`);
         
         localStorage.removeItem('CART');
 

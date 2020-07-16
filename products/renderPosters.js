@@ -47,7 +47,9 @@ function renderPosters(posters) {
         const stringyCart = JSON.stringify(cart);
 
         localStorage.setItem('CART', stringyCart);
+        // const stringyAlert = JSON.stringify(posters.name);
         alert('1 ' + posters.name + ' added to cart');
+        // alert(`1 + ${posters.name} + added to cart`);
 
     });
     p.appendChild(button);
