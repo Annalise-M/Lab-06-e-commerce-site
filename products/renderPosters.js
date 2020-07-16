@@ -20,7 +20,7 @@ function renderPosters(posters) {
     const usd = '$' + posters.price.toFixed(2);
     p.textContent = usd;
 
-    const button = document.createElement('button');
+    const button = document.createElement('place-order-button');
     button.textContent = 'Add to Cart';
     button.value = posters.code;
     p.appendChild(button);
@@ -31,5 +31,4 @@ function renderPosters(posters) {
 
 }
 export default renderPosters;
-
 

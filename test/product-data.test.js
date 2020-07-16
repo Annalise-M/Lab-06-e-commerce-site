@@ -16,7 +16,7 @@ test('some thing goes here ', (assert) => {
         price: 12.00
     };
 
-    const expected = '<li class="2020" title="Burning Man Multiverse 2020"><h3>Mulitverse</h3><img src="../assets/BM_2020_poster.jpg" alt="Mulitverse image" style="height: 500px;"><p class="price">$12.00<button value="undefined">Add to Cart</button></p></li>';
+    const expected = '<li class="2020" title="Burning Man Multiverse 2020"><h3>Mulitverse</h3><img src="../assets/BM_2020_poster.jpg" alt="Mulitverse image" style="height: 500px;"><p class="price">$12.00<place-order-button>Add to Cart</place-order-button></p></li>';
 
     //Act 
     // Call the function you're testing and set the result to a const
