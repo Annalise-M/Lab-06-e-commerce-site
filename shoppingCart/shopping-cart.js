@@ -21,10 +21,22 @@ for (let i = 0; i < cart.length; i++) {
     
     tbody.appendChild(dom);
 }
-if (cart.length === 0) {
-    placeOrderButton.disabled = true;
-}
 
 const orderTotal = calcOrderTotal(cart, posters);
 orderTotalCell.textContent = toUSD(orderTotal);
+
+if (cart.length === 0) {
+    placeOrderButton.disabled = true;
+} 
+else {
+    placeOrderButton.addEventListener('click', () => {
+        
+        localStorage.removeItem('CART');
+
+        alert('Order placed! ' + JSON.stringify(getCart, true));
+
+        window.location = '../index.html';
+    });
+}
+
 
